@@ -1,20 +1,5 @@
 build:
   properties: skipTests skipDepClean
 clients:
-  - repository: SpoonLabs/flacoco
-  - repository: SpoonLabs/coming
   - repository: SpoonLabs/astor
-  - repository: SpoonLabs/npefix
-  - repository: SpoonLabs/nopol
-    sources: nopol/src/main/java
-  - repository: SpoonLabs/npefix
-  - repository: STAMP-project/AssertFixer
-  - repository: Spirals-Team/casper
-  - repository: SpoonLabs/CoCoSpoon
-  - repository: STAMP-project/dspot
-    sources: dspot/src/main/java
-  - repository: SpoonLabs/gumtree-spoon-ast-diff
-  - repository: Spirals-Team/jPerturb
-  - repository: SpoonLabs/metamutator
-  - repository: SpoonLabs/spooet
-  - repository: KTH/spork
+    sha: 8581b1c686103352e7f6189f54437ea1e46f0c36
