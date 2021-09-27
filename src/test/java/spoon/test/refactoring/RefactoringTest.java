@@ -18,7 +18,6 @@ package spoon.test.refactoring;
 
 import org.junit.Test;
 import spoon.Launcher;
-import spoon.refactoring.Refactoring;
 import spoon.reflect.code.BinaryOperatorKind;
 import spoon.reflect.code.CtBinaryOperator;
 import spoon.reflect.code.CtInvocation;
@@ -42,7 +41,7 @@ public class RefactoringTest {
 	@Test
 	public void testRefactoringClassChangeAllCtTypeReferenceAssociatedWithClassConcerned() {
 		Launcher launcher = new Launcher();
-		launcher.setArgs(new String[]{
+		launcher.setArgs(new String[] {
 				"-i", "src/test/java/spoon/test/refactoring/testclasses",
 				"-o", "target/spooned/refactoring"
 		});
@@ -52,7 +51,7 @@ public class RefactoringTest {
 		assertNotNull(aClass);
 
 		launcher = new Launcher();
-		launcher.setArgs(new String[]{
+		launcher.setArgs(new String[] {
 				"-i", "src/test/java/spoon/test/refactoring/testclasses",
 				"-o", "target/spooned/refactoring",
 				"-p", ThisTransformationProcessor.class.getName()
@@ -81,7 +80,7 @@ public class RefactoringTest {
 	@Test
 	public void testThisInConstructor() {
 		final Launcher launcher = new Launcher();
-		launcher.setArgs(new String[]{
+		launcher.setArgs(new String[] {
 				"-i", "src/test/java/spoon/test/refactoring/testclasses",
 				"-o", "target/spooned/refactoring"
 		});
@@ -100,7 +99,7 @@ public class RefactoringTest {
 	@Test
 	public void testThisInConstructorAfterATransformation() {
 		final Launcher launcher = new Launcher();
-		launcher.setArgs(new String[]{
+		launcher.setArgs(new String[] {
 				"-i", "src/test/java/spoon/test/refactoring/testclasses",
 				"-o", "target/spooned/refactoring",
 				"-p", ThisTransformationProcessor.class.getName()
@@ -119,7 +118,7 @@ public class RefactoringTest {
 	@Test
 	public void testTransformedInstanceofAfterATransformation() {
 		final Launcher launcher = new Launcher();
-		launcher.setArgs(new String[]{
+		launcher.setArgs(new String[] {
 				"-i", "src/test/java/spoon/test/refactoring/testclasses",
 				"-o", "target/spooned/refactoring",
 				"-p", ThisTransformationProcessor.class.getName()
@@ -131,13 +130,5 @@ public class RefactoringTest {
 		assertEquals(BinaryOperatorKind.INSTANCEOF, instanceofInvocation.getKind());
 		assertEquals("o", instanceofInvocation.getLeftHandOperand().toString());
 		assertEquals("spoon.test.refactoring.testclasses.AClassX", instanceofInvocation.getRightHandOperand().toString());
-	}
-
-	@Test
-	public void testremoveDeprecatedMethods() {
-		// this shows that we can remove deprecated methods
-		// with Spoon
-		// ... and that the sniper mode works well-enough to be applied on Spoon itself
-		// Refactoring.removeDeprecatedMethods("src/main/java");
 	}
 }

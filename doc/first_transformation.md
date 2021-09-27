@@ -117,10 +117,9 @@ public class ClassProcessor extends AbstractProcessor<CtClass<?>> {
 
 ## Refactoring transformations
 
-Spoon provides some methods for automated refactoring:.
+Spoon can be used for automated refactoring such as renaming variables programmatically.
 
 * [Local Variable Refactoring](http://spoon.gforge.inria.fr/mvnsites/spoon-core/apidocs/spoon/refactoring/CtRenameLocalVariableRefactoring.html)
 class, renames local variables and includes extra checking to ensure program correctness after renaming,
 * [Generic Variable Refactoring](http://spoon.gforge.inria.fr/mvnsites/spoon-core/apidocs/spoon/refactoring/CtRenameGenericVariableRefactoring.html)
 class, renames any variable type (field, parameter, local), but does not do any extra checking to ensure program correctness.
-* `Refactoring` contains helper methods for refactoring, incl. one for automated removal of deprecated methods.
