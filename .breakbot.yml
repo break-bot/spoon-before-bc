@@ -1,5 +1,32 @@
+# Putting back clients in the state they were at the time of the PR
 build:
   properties: skipTests skipDepClean
 clients:
+  - repository: SpoonLabs/coming
+    sha: 6c3c3e62fa5425e1fddec34b339947e91f8e7d4d
   - repository: SpoonLabs/astor
-    sha: 8581b1c686103352e7f6189f54437ea1e46f0c36
+    sha: 9a86023a2d09f08dd72f7ddd1033f001d26a5a6f
+  - repository: SpoonLabs/npefix
+    sha: 8d7b6ba9358d6f6c08f44dd80e49c5c3f733b7fe
+  - repository: SpoonLabs/nopol
+    sha: 2bcc7dc685a1e66189363aa2a6be082868440106
+    sources: nopol/src/main/java
+  - repository: SpoonLabs/npefix
+    sha: 8d7b6ba9358d6f6c08f44dd80e49c5c3f733b7fe
+  - repository: STAMP-project/AssertFixer
+    sha: fa467813d1d99f30c81520e5e4437f2b8c07bafe
+  - repository: Spirals-Team/casper
+    sha: 7d517b9b2cf83ce0ad6ef2119dfe1a431255ebac
+  - repository: SpoonLabs/CoCoSpoon
+    sha: 5fa074ff31f36b438829ba57910bc727f8cb765b
+  - repository: STAMP-project/dspot
+    sha: 4ade61967699a8fa4d24159e0e689500978e850d
+    sources: dspot/src/main/java
+  - repository: SpoonLabs/gumtree-spoon-ast-diff
+    sha: 81aca369bb0b83b1823168d4666989d1f5fd6fca
+  - repository: Spirals-Team/jPerturb
+    sha: cfc7de2fd0b4882838b438507a9317e4406ca9dc
+  - repository: SpoonLabs/metamutator
+    sha: af72bb94bd9ed54ff0fbab99b48b7ee4ca59dee7
+  - repository: SpoonLabs/spooet
+    sha: 77bca0fbc5a59d015cfbb29b8b009f121dd89bf7
