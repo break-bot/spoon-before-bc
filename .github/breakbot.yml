@@ -1,6 +1,11 @@
 # Putting back clients in the state they were at the time of the PR
 build:
-  properties: [maven.test.skip, skipDepClean, assembly.skipAssembly, jacoco.skip, mdep.skip]
+  properties:
+    maven.test.skip: true
+    assembly.skipAssembly: true
+    jacoco.skip: true
+    mdep.skip: true
+    skipDepClean: true
 clients:
   - repository: SpoonLabs/coming
     sha: 6c3c3e62fa5425e1fddec34b339947e91f8e7d4d
