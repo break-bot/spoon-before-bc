@@ -1,6 +1,6 @@
 # Putting back clients in the state they were at the time of the PR
 build:
-  properties: skipTests skipDepClean
+  properties: [maven.test.skip, skipDepClean, assembly.skipAssembly, jacoco.skip, mdep.skip]
 clients:
   - repository: SpoonLabs/coming
     sha: 6c3c3e62fa5425e1fddec34b339947e91f8e7d4d
@@ -11,8 +11,6 @@ clients:
   - repository: SpoonLabs/nopol
     sha: 2bcc7dc685a1e66189363aa2a6be082868440106
     sources: nopol/src/main/java
-  - repository: SpoonLabs/npefix
-    sha: 8d7b6ba9358d6f6c08f44dd80e49c5c3f733b7fe
   - repository: STAMP-project/AssertFixer
     sha: fa467813d1d99f30c81520e5e4437f2b8c07bafe
   - repository: Spirals-Team/casper
